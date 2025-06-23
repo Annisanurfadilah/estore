@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Konten scrollable -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_buttons"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Tombol back di atas gambar -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:src="@drawable/ic_arrow_back"
+                android:background="@drawable/bg_circle"
+                android:contentDescription="Kembali"
+                android:padding="8dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <!-- Gambar produk -->
+            <ImageView
+                android:id="@+id/img_product"
+                android:src="@drawable/kulkas"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_width="100dp"
+                android:layout_height="250dp" />
+
+
+            <!-- Judul & harga -->
+            <TextView
+                android:id="@+id/txt_name"
+                android:text="Kulkas Samsung"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:text="Rp 54.000.000"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txt_rating"
+                    android:text="  ★ 4.8"
+                    android:textColor="@android:color/black"
+                    android:paddingStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Deskripsi produk -->
+            <TextView
+                android:text="Deskripsi Produk"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:text="Samsung Family Hub adalah kulkas pintar dengan layar sentuh besar, fitur Wi-Fi, dan desain elegan. Cocok untuk dapur modern dan memudahkan aktivitas keluarga."
+                android:textColor="@android:color/black"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Ulasan pengguna -->
+            <TextView
+                android:text="Ulasan Pengguna"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Warna label -->
+            <TextView
+                android:text="Warna"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Warna options -->
+            <TextView
+                android:id="@+id/txt_colors"
+                android:text="Biru, Merah, Putih"
+                android:textColor="@android:color/darker_gray"
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <!-- Satu ulasan -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ana"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_circle" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anna"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/user_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bisa lihat isi kulkas dari HP, keren banget!"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Sticky bottom bar -->
+    <LinearLayout
+        android:id="@+id/bottom_buttons"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_add_cart"
+            android:text="Tambah"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/gray"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:layout_width="0dp"
+            android:layout_height="48dp" />
+
+        <Button
+            android:id="@+id/btn_buy_now"
+            android:text="Beli Sekarang"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/blue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

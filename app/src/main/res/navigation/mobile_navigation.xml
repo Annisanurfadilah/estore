@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <!-- HomeFragment -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.riderstore.ui.home.HomeFragment"
+        tools:layout="@layout/activity_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <!-- DetailFragment -->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.riderstore.ui.detail.DetailFragment"
+        tools:layout="@layout/fragment_detail" />
+
+    <!-- FilterFragment -->
+    <fragment
+        android:id="@+id/navigation_filter"
+        android:name="com.example.riderstore.ui.filter.FilterFragment"
+        tools:layout="@layout/fragment_filter" />
+
+    <!-- KeranjangFragment -->
+    <fragment
+        android:id="@+id/navigation_keranjang"
+        android:name="com.example.riderstore.ui.keranjang.KeranjangFragment"
+        tools:layout="@layout/fragment_keranjang">
+        <action
+            android:id="@+id/action_keranjangFragment_to_checkoutFragment"
+            app:destination="@+id/checkoutFragment" />
+    </fragment>
+
+    <!-- CheckoutFragment -->
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.riderstore.ui.checkout.CheckoutFragment"
+        tools:layout="@layout/fragment_checkout" />
+
+    <!-- NotifikasiFragment -->
+    <fragment
+        android:id="@+id/navigation_notifikasi"
+        android:name="com.example.riderstore.ui.notifikasi.NotifikasiFragment"
+        tools:layout="@layout/fragment_notifikasi" />
+
+    <!-- AccountFragment -->
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.riderstore.ui.akun.AccountFragment"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment_to_profileFragment"
+            app:destination="@+id/profileFragment" />
+    </fragment>
+
+    <!-- ProfileFragment -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.riderstore.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

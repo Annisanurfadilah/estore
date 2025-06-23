@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar_cart"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_toolbar_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="Keranjang"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Isi Scroll -->
+    <ScrollView
+        android:id="@+id/cart_scroll"
+        android:layout_below="@id/toolbar_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ==================== Toko 1 ==================== -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Header toko -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/check_store_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
+
+                    <TextView
+                        android:text="Sharp 43 Smart TV"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:paddingStart="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/btn_remove_store_1"
+                        android:text="Hapus"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_outline_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginVertical="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD" />
+
+                <!-- Item produk -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/check_product_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
+
+                    <ImageView
+                        android:src="@drawable/ic_tv_sharp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingStart="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Sharp 43-inch Smart TV"
+                            android:textStyle="bold"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <!-- Counter -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/minus_1"
+                                android:text="-"
+                                android:backgroundTint="@color/gray"
+                                android:textColor="@color/black"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                            <TextView
+                                android:id="@+id/quantity_1"
+                                android:text="1"
+                                android:gravity="center"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                            <Button
+                                android:id="@+id/plus_1"
+                                android:text="+"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/gray"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== Toko 2 ==================== -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Header toko -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/check_store_2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
+
+                    <TextView
+                        android:text="Philips Official"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:paddingStart="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/btn_remove_store_2"
+                        android:text="Hapus"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_outline_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginVertical="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD" />
+
+                <!-- Item produk -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/check_product_2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
+
+                    <ImageView
+                        android:src="@drawable/ic_blender_philips"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingStart="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Blender Philips 2L"
+                            android:textStyle="bold"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <!-- Counter -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/minus_2"
+                                android:text="-"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/gray"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                            <TextView
+                                android:id="@+id/quantity_2"
+                                android:text="1"
+                                android:gravity="center"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                            <Button
+                                android:id="@+id/plus_2"
+                                android:text="+"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/gray"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== Toko 3 ==================== -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Header toko -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/check_store_3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
+
+                    <TextView
+                        android:text="LG Official"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:paddingStart="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/btn_remove_store_3"
+                        android:text="Hapus"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_outline_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginVertical="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD" />
+
+                <!-- Item produk -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/check_product_3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp" />
+
+                    <ImageView
+                        android:src="@drawable/mesin_cuci_lg"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="8dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:paddingStart="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="LG Front Load 8KG"
+                            android:textStyle="bold"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <!-- Counter -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/minus_3"
+                                android:text="-"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/gray"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                            <TextView
+                                android:id="@+id/quantity_3"
+                                android:text="1"
+                                android:gravity="center"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                            <Button
+                                android:id="@+id/plus_3"
+                                android:text="+"
+                                android:textColor="@color/black"
+                                android:backgroundTint="@color/gray"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <CheckBox
+            android:id="@+id/check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Semua" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: Rp 4.198.000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ongkir: Rp 200.000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/blue"
+            android:text="Pesan"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

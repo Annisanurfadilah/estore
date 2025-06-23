@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "riderstore"
+rootProject.name = "estore"
 include(":app")
  

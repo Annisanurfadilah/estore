@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.riderstore"
+    namespace = "com.example.estore"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.riderstore"
+        applicationId = "com.example.estore"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
